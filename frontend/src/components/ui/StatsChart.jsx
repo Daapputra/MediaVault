@@ -4,7 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 
 const StatsChart = ({ original, compressed }) => {
   const data = [
     {
-      name: 'Original',
+      name: 'Raw Pixels',
       size: original,
       color: '#475569' // slate-600
     },

@@ -21,9 +21,9 @@ const ResultCard = ({ result, title = "Compression Result", type = "compression"
             <div className="grid grid-cols-2 gap-4">
               <StatItem 
                 icon={HardDrive} 
-                label="Original Size" 
-                value={result.original_size_formatted} 
-                subValue={`${result.original_size} bytes`}
+                label="Raw Uncompressed Size" 
+                value={result.original_raw_size_formatted} 
+                subValue={`${result.original_raw_size} bytes`}
               />
               <StatItem 
                 icon={Zap} 
@@ -47,7 +47,7 @@ const ResultCard = ({ result, title = "Compression Result", type = "compression"
           </div>
           <div className="flex items-center justify-center">
             <StatsChart 
-              original={result.original_size} 
+              original={result.original_raw_size} 
               compressed={result.compressed_size} 
             />
           </div>
