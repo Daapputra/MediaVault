@@ -2,8 +2,6 @@
 
 **Media Vault** is an advanced, educational-grade Media Processing Hub built as a Capstone Project for the Multimedia Systems course. It features **Lossless Media Compression** and **Secure Steganography** built entirely from scratch without relying on instant third-party libraries for the core algorithms.
 
-![Media Vault Banner](https://via.placeholder.com/1000x400/1e1e2f/6c63ff?text=Media+Vault+-+Lossless+Compression+%26+Steganography)
-
 ## ✨ Core Features
 
 ### 1. Lossless Data Compression (Custom Implementation)
