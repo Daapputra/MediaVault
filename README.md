@@ -27,48 +27,67 @@
 - **Pillow (PIL)** (Extracting raw pixel data, NOT for compression)
 - **Pytest** (Automated Unit Testing & Lossless Verification)
 
-## 🚀 How to Run Locally
+## 🚀 Cara Menjalankan Project (Untuk Teman Kelompok)
 
-### 1. Backend Setup
-Navigate to the backend directory and install the requirements:
+Ikuti langkah-langkah di bawah ini secara berurutan agar aplikasi berjalan lancar di komputer masing-masing.
+
+### 0. Clone Repository
+Buka terminal/CMD dan jalankan:
+```bash
+git clone https://github.com/Daapputra/MediaVault.git
+cd MediaVault
+```
+
+### 1. Setup Backend (Python)
+Buka terminal baru, masuk ke folder `backend`, dan buat Virtual Environment agar library tidak berantakan:
 ```bash
 cd backend
+python -m venv venv
+```
+Aktifkan Virtual Environment:
+- **Windows:** `venv\Scripts\activate`
+- **Mac/Linux:** `source venv/bin/activate`
+
+Setelah venv aktif (ada tulisan `(venv)` di terminal), install dependencies:
+```bash
 pip install -r requirements.txt
 ```
-Start the Flask API server:
+Lalu jalankan server backend:
 ```bash
 python app.py
 ```
-*The backend will run on `http://localhost:5000`*
+*(Biarkan terminal ini tetap terbuka. Backend berjalan di `http://localhost:5000`)*
 
-### 2. Frontend Setup
-Open a new terminal, navigate to the frontend directory, and install dependencies:
+### 2. Setup Frontend (React/Vite)
+Buka **terminal baru** (biarkan terminal backend di atas tetap jalan), masuk ke folder `frontend`:
 ```bash
 cd frontend
 npm install
 ```
-Start the Vite development server:
+Jalankan server frontend:
 ```bash
 npm run dev
 ```
-*The frontend will run on `http://localhost:5173`*
+*(Frontend berjalan di `http://localhost:5173`. Buka link ini di browser Anda!)*
+
+---
 
 ## 🧪 Automated Testing
 
-The backend includes a comprehensive suite of 52 unit tests to mathematically prove the integrity of the compression and steganography algorithms.
+The backend includes a comprehensive suite of unit tests to mathematically prove the integrity of the compression and steganography algorithms.
 
-To run the test suite:
+To run the test suite (pastikan venv backend sedang aktif):
 ```bash
 cd backend
-pytest tests/ -v
+python -m pytest tests/ -v
 ```
 
 ## 🏗️ Project Roadmap
 
 - [x] **Phase 1:** Foundation & Image Module (Huffman Codec & LSB Steganography)
-- [ ] **Phase 2:** Audio Module (WAV Compression & Steganography) - *In Progress*
-- [ ] **Phase 3:** Video Module (AVI/MP4 Frame-by-Frame Processing)
-- [ ] **Phase 4:** Final UI Polish & Edge Case Handling
+- [x] **Phase 2:** Audio Module (WAV Compression & Steganography)
+- [x] **Phase 3:** Video Module (Huffman Archive & EOF Structural Steganography)
+- [x] **Phase 4:** Final UI Polish & Bug Fixing
 
 ---
 *Developed for Multimedia Systems Capstone Project*
