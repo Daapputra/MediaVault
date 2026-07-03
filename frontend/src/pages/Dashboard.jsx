@@ -84,12 +84,12 @@ const Dashboard = () => {
               <Link to="/compression/image" className="flex items-center gap-2 px-4 py-2 bg-surface border border-border rounded-lg hover:border-primary hover:text-primary transition-colors text-sm font-medium text-text-secondary">
                 <ImageIcon className="w-4 h-4" /> Image
               </Link>
-              <button disabled className="flex items-center gap-2 px-4 py-2 bg-background border border-border rounded-lg opacity-50 cursor-not-allowed text-sm font-medium text-text-secondary">
+              <Link to="/compression/audio" className="flex items-center gap-2 px-4 py-2 bg-surface border border-border rounded-lg hover:border-primary hover:text-primary transition-colors text-sm font-medium text-text-secondary">
                 <Music className="w-4 h-4" /> Audio
-              </button>
-              <button disabled className="flex items-center gap-2 px-4 py-2 bg-background border border-border rounded-lg opacity-50 cursor-not-allowed text-sm font-medium text-text-secondary">
+              </Link>
+              <Link to="/compression/video" className="flex items-center gap-2 px-4 py-2 bg-surface border border-border rounded-lg hover:border-primary hover:text-primary transition-colors text-sm font-medium text-text-secondary">
                 <Video className="w-4 h-4" /> Video
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -106,12 +106,12 @@ const Dashboard = () => {
               <Link to="/steganography/image" className="flex items-center gap-2 px-4 py-2 bg-surface border border-border rounded-lg hover:border-secondary hover:text-secondary transition-colors text-sm font-medium text-text-secondary">
                 <ImageIcon className="w-4 h-4" /> Image
               </Link>
-              <button disabled className="flex items-center gap-2 px-4 py-2 bg-background border border-border rounded-lg opacity-50 cursor-not-allowed text-sm font-medium text-text-secondary">
+              <Link to="/steganography/audio" className="flex items-center gap-2 px-4 py-2 bg-surface border border-border rounded-lg hover:border-secondary hover:text-secondary transition-colors text-sm font-medium text-text-secondary">
                 <Music className="w-4 h-4" /> Audio
-              </button>
-              <button disabled className="flex items-center gap-2 px-4 py-2 bg-background border border-border rounded-lg opacity-50 cursor-not-allowed text-sm font-medium text-text-secondary">
+              </Link>
+              <Link to="/steganography/video" className="flex items-center gap-2 px-4 py-2 bg-surface border border-border rounded-lg hover:border-secondary hover:text-secondary transition-colors text-sm font-medium text-text-secondary">
                 <Video className="w-4 h-4" /> Video
-              </button>
+              </Link>
             </div>
           </div>
         </div>

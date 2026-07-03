@@ -15,8 +15,8 @@ const Sidebar = () => {
       icon: <Minimize2 className="w-4 h-4 mr-2 text-primary" />,
       items: [
         { path: '/compression/image', label: 'Image', icon: ImageIcon },
-        { path: '/compression/audio', label: 'Audio', icon: Music, disabled: true },
-        { path: '/compression/video', label: 'Video', icon: Video, disabled: true },
+        { path: '/compression/audio', label: 'Audio', icon: Music },
+        { path: '/compression/video', label: 'Video', icon: Video },
       ]
     },
     {
@@ -24,8 +24,8 @@ const Sidebar = () => {
       icon: <Lock className="w-4 h-4 mr-2 text-secondary" />,
       items: [
         { path: '/steganography/image', label: 'Image', icon: ImageIcon },
-        { path: '/steganography/audio', label: 'Audio', icon: Music, disabled: true },
-        { path: '/steganography/video', label: 'Video', icon: Video, disabled: true },
+        { path: '/steganography/audio', label: 'Audio', icon: Music },
+        { path: '/steganography/video', label: 'Video', icon: Video },
       ]
     }
   ];

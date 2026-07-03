@@ -3,7 +3,11 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Dashboard from './pages/Dashboard';
 import ImageCompression from './components/compression/ImageCompression';
+import AudioCompression from './components/compression/AudioCompression';
+import VideoCompression from './components/compression/VideoCompression';
 import ImageSteganography from './components/steganography/ImageSteganography';
+import AudioSteganography from './components/steganography/AudioSteganography';
+import VideoSteganography from './components/steganography/VideoSteganography';
 
 function App() {
   return (
@@ -14,13 +18,13 @@ function App() {
           
           {/* Compression Routes */}
           <Route path="compression/image" element={<ImageCompression />} />
-          <Route path="compression/audio" element={<div className="p-8 text-center text-text-secondary glass-panel">Audio Compression coming soon in Phase 2</div>} />
-          <Route path="compression/video" element={<div className="p-8 text-center text-text-secondary glass-panel">Video Compression coming soon in Phase 3</div>} />
+          <Route path="compression/audio" element={<AudioCompression />} />
+          <Route path="compression/video" element={<VideoCompression />} />
           
           {/* Steganography Routes */}
           <Route path="steganography/image" element={<ImageSteganography />} />
-          <Route path="steganography/audio" element={<div className="p-8 text-center text-text-secondary glass-panel">Audio Steganography coming soon in Phase 2</div>} />
-          <Route path="steganography/video" element={<div className="p-8 text-center text-text-secondary glass-panel">Video Steganography coming soon in Phase 3</div>} />
+          <Route path="steganography/audio" element={<AudioSteganography />} />
+          <Route path="steganography/video" element={<VideoSteganography />} />
           
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />

@@ -54,6 +54,56 @@ export const extractImageMessage = (file, onProgress) => {
   return uploadRequest('/stego/image/extract', formData, onProgress);
 };
 
+export const compressAudio = (file, onProgress) => {
+  const formData = new FormData();
+  formData.append('file', file);
+  return uploadRequest('/compress/audio', formData, onProgress);
+};
+
+export const decompressAudio = (file, onProgress) => {
+  const formData = new FormData();
+  formData.append('file', file);
+  return uploadRequest('/decompress/audio', formData, onProgress);
+};
+
+export const embedAudioMessage = (file, message, onProgress) => {
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('message', message);
+  return uploadRequest('/stego/audio/embed', formData, onProgress);
+};
+
+export const extractAudioMessage = (file, onProgress) => {
+  const formData = new FormData();
+  formData.append('file', file);
+  return uploadRequest('/stego/audio/extract', formData, onProgress);
+};
+
+export const compressVideo = (file, onProgress) => {
+  const formData = new FormData();
+  formData.append('file', file);
+  return uploadRequest('/compress/video', formData, onProgress);
+};
+
+export const decompressVideo = (file, onProgress) => {
+  const formData = new FormData();
+  formData.append('file', file);
+  return uploadRequest('/decompress/video', formData, onProgress);
+};
+
+export const embedVideoMessage = (file, message, onProgress) => {
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('message', message);
+  return uploadRequest('/stego/video/embed', formData, onProgress);
+};
+
+export const extractVideoMessage = (file, onProgress) => {
+  const formData = new FormData();
+  formData.append('file', file);
+  return uploadRequest('/stego/video/extract', formData, onProgress);
+};
+
 // Generate download URL
 export const getDownloadUrl = (path) => {
   if (!path) return null;
