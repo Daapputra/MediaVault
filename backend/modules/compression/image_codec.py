@@ -181,15 +181,17 @@ def decompress_image(input_path):
     except Exception as e:
         raise ValueError(f"Failed to reconstruct image: {str(e)}")
     
-    # Simpan sebagai PNG (lossless format)
+    # Simpan sebagai BMP (uncompressed format)
+    # Ini sangat penting agar file tidak terkompres ulang oleh algoritma bawaan PNG
+    # sehingga membuktikan hasil dekompresi kembali ke ukuran raksasa aslinya
     base_name = os.path.splitext(os.path.basename(input_path))[0]
     output_dir = os.path.dirname(input_path).replace('input', 'output')
     os.makedirs(output_dir, exist_ok=True)
     output_path = os.path.join(
         output_dir,
-        f"{base_name}_decompressed.png"
+        f"{base_name}_decompressed.bmp"
     )
-    img.save(output_path, format='PNG')
+    img.save(output_path, format='BMP')
     
     # ── Kalkulasi statistik ──
     processing_time = time.time() - start_time
