@@ -181,6 +181,11 @@ def decompress_image(input_path):
     except Exception as e:
         raise ValueError(f"Failed to reconstruct image: {str(e)}")
     
+    # Konversi ke RGB jika gambar memiliki Alpha channel (RGBA)
+    # karena format BMP 32-bit sering error saat dibuka di Windows Photos
+    if img.mode in ('RGBA', 'LA') or (img.mode == 'P' and 'transparency' in img.info):
+        img = img.convert('RGB')
+        
     # Simpan sebagai BMP (uncompressed format)
     # Ini sangat penting agar file tidak terkompres ulang oleh algoritma bawaan PNG
     # sehingga membuktikan hasil dekompresi kembali ke ukuran raksasa aslinya
